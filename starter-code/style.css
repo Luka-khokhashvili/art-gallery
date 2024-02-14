@@ -1,0 +1,7 @@
+:root {
+    /* Color variables */
+    --background-white: rgb(255, 255, 255);
+    --accent-orange: rgb(213, 150, 108);
+    --accent-black: rgb(21, 21, 21);
+    --grey: rgb(68, 68, 68);
+}
