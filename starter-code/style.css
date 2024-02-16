@@ -43,7 +43,7 @@
 }
 
 .gradient-text {
-    background-image: linear-gradient(to right, white 93.6%, black 10%);
+    background-image: linear-gradient(to right, var(--white) 93.6%, var(--accent-black) 10%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -81,7 +81,7 @@
 }
 
 .button {
-    background-color: black;
+    background-color: var(--accent-black);
     font-family: var(--main-font);
     font-size: 1.39vw;
     font-weight: 800;
@@ -93,12 +93,125 @@
     margin-left: 8.5%;
     display: flex;
     justify-content: space-between;
+    transition: background-color 0.4s ease 0s;
 }
+
 
 .button-arrow {
     background-color: var(--accent-orange);
     width: 3%;
     height: 100%;
     margin: -10.1%;
+    margin-right: -10.3%;
     padding: 10.1%;
+    transition: background-color 0.4s ease 0s;
+}
+
+.button:hover {
+    background-color: var(--accent-orange);
+}
+
+.button:hover .button-arrow{
+    background-color: var(--accent-black);
+}
+
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10%;
+    gap: 2%;
+}
+
+.grid-block:nth-child(1) {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 71%;
+    gap: 8%;
+}
+
+.grid-block:nth-child(2) {
+    grid-column: span 3;
+}
+
+.grid-block:nth-child(3) {
+    grid-row: span 2;
+    grid-column: span 3;
+}
+
+.grid-block:nth-child(3) img {
+    height: 94.2%;
+}
+
+.grid-block:nth-child(4) {
+    grid-column: span 2;
+}
+
+.grid-block:nth-child(5) {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+    height: 100%;
+    padding: 10%;
+    margin-top: -30%;
+    background-color: var(--accent-black);
+}
+
+.grid-block:nth-child(5) > .secondary-title,
+.grid-block:nth-child(5) > .paragraph {
+    color: var(--white);
+} 
+
+.grid-block img {
+    width: 100%;
+}
+
+.secondary-title {
+    font-family: var(--main-font);
+    font-size: 4.17vw;
+    font-weight: 900;
+    line-height: 4.17vw;
+    text-transform: uppercase;
+    color: var(--accent-black);
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: var(--accent-black);
+    padding: 5% 0;
+}
+
+.main-logo {
+    width: 12%;
+    height: 10%;
+}
+
+.footer-paragraph {
+    font-family: var(--secondary-font);
+    font-size: 1.251vw;
+    font-weight: 300;
+    line-height: 1.946vw;
+    color: var(--white);
+}
+
+.social-links {
+    width: 5%;
+}
+
+.social-link svg path {
+    transition: fill 0.4s ease 0s;
+}
+
+.social-link:hover svg path {
+    fill: var(--accent-orange);
+  }
+  
+
+.margin-around {
+    margin: 0 10%;
 }
