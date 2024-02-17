@@ -9,10 +9,11 @@
   --secondary-font: "ourfit", sans-serif;
 }
 
-.body {
-  background-color: var(--background-white);
+body {
+  background-color: var(--white);
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .welcome-section {
@@ -106,6 +107,7 @@
   margin: -10.1%;
   margin-right: -10.3%;
   padding: 10.1%;
+  padding-bottom: 10.17%;
   transition: background-color 0.4s ease 0s;
 }
 
@@ -216,3 +218,100 @@
 .margin-around {
   margin: 0 10%;
 }
+/* End of Main page styles*/
+
+/* ######## Location page styles ######## */
+
+.location-header {
+  width: 100%;
+  height: 80%;
+  background-image: url(./assets/desktop/image-map@2x.png);
+  background-size: cover;
+}
+
+.location-button {
+  width: 18.9%;
+  padding: 0;
+  padding-right: 0.6%;
+  margin-left: 11.5%;
+  display: flex;
+  gap: 10%;
+  align-items: center;
+  justify-content: unset;
+}
+
+.location-arrow {
+  margin: 0;
+}
+
+.location-arrow img {
+  transform: rotate(180deg);
+}
+
+.location-body {
+  background-color: var(--accent-black);
+  width: 100%;
+  height: 70%;
+  display: flex;
+}
+
+.location-body-left-half {
+  width: 50%;
+  height: 100%;
+  padding: 6% 11%;
+}
+
+.location-body-title {
+  font-family: var(--main-font);
+  font-size: 4.864vw;
+  font-weight: 900;
+  line-height: 4.864vw;
+  text-transform: uppercase;
+  color: var(--white);
+  width: 60%;
+}
+
+.location-body-right-half {
+  min-width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 6.3%;
+  gap: 8%;
+}
+
+.location-secondary-title {
+  font-family: var(--main-font);
+  font-size: 2.502vw;
+  font-weight: 900;
+  line-height: 2.502vw;
+  text-transform: uppercase;
+  color: var(--accent-orange);
+}
+
+.location-paragraph {
+  font-family: var(--secondary-font);
+  font-size: 1.529vw;
+  font-weight: 200;
+  line-height: 2.224vw;
+  color: var(--white);
+  width: 70%;
+}
+
+.orange-footer {
+  background-color: var(--accent-orange);
+}
+
+.black-paragraph {
+  color: var(--accent-black);
+}
+
+.location-links svg path {
+  fill: var(--accent-black);
+}
+
+.location-links:hover svg path {
+  fill: var(--white);
+}
+
+/* ######## End of Location page styles ######## */
