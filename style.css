@@ -33,9 +33,9 @@ body {
 
 .main-title {
   font-family: var(--main-font);
-  font-size: 6.671vw;
+  font-size: clamp(70px, 6.671vw, 100px);
   font-weight: 900;
-  line-height: 6.115vw;
+  line-height: clamp(65px, 6.115vw, 75px);
   text-transform: uppercase;
   color: var(--accent-black);
   position: relative;
@@ -78,18 +78,19 @@ body {
 
 .paragraph {
   font-family: var(--secondary-font);
-  font-size: 1.529vw;
+  font-size: clamp(17px, 1.529vw, 25px);
   font-weight: 300;
-  line-height: 2.224vw;
+  line-height: clamp(28px, 2.224vw, 35px);
   color: var(--grey);
+  width: 94%;
 }
 
 .button {
   background-color: var(--accent-black);
   font-family: var(--main-font);
-  font-size: 1.39vw;
+  font-size: clamp(20px, 1.39vw, 30px);
   font-weight: 800;
-  letter-spacing: 0.253vw;
+  letter-spacing: clamp(3.64px, 0.253vw, 4px);
   color: var(--white);
   text-transform: uppercase;
   width: 35%;
@@ -97,6 +98,7 @@ body {
   margin-left: 8.5%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   transition: background-color 0.4s ease 0s;
 }
 
@@ -172,11 +174,23 @@ body {
   width: 100%;
 }
 
+.desktop-image {
+  display: block;
+}
+
+.tablet-image {
+  display: none;
+}
+
+.mobile-image {
+  display: none;
+}
+
 .secondary-title {
   font-family: var(--main-font);
-  font-size: 4.17vw;
+  font-size: clamp(45px, 4.17vw, 60px);
   font-weight: 900;
-  line-height: 4.17vw;
+  line-height: clamp(45px, 4.17vw, 60px);
   text-transform: uppercase;
   color: var(--accent-black);
 }
@@ -197,9 +211,9 @@ body {
 
 .footer-paragraph {
   font-family: var(--secondary-font);
-  font-size: 1.251vw;
+  font-size: clamp(15px, 1.251vw, 18px);
   font-weight: 300;
-  line-height: 1.946vw;
+  line-height: clamp(26px, 1.946vw, 30px);
   color: var(--white);
 }
 
@@ -316,3 +330,98 @@ body {
 }
 
 /* ######## End of Location page styles ######## */
+
+/* ######## Responsive designs ######## */
+
+/* Tablet design */
+@media screen and (max-width: 768px) {
+  .welcome-section {
+    height: 70vh;
+  }
+  
+  .hero-image {
+    width: 100%;
+    top: 0;
+    right: 0;
+  }
+
+  .main-title {
+    display: none;
+  }
+
+  .responsive-title {
+    display: block;
+    margin: 0;
+  }
+
+  .welcome-right-half {
+    margin-left: -8%;
+    width: 50%;
+  }
+
+  .button {
+    margin-left: unset;
+    width: 50%;
+    padding: 5%;
+  }
+
+  .grid-section {
+    row-gap: 1%;
+    column-gap: 2%;
+  }
+
+  .grid-block:nth-child(1) {
+    width: 100%;
+    padding-top: 10%;
+    gap: 20px;
+  }
+
+  .grid-block:nth-child(1) h3 {
+    width: 75%;
+  }
+
+  .grid-block:nth-child(5) {
+    margin-top: -55%;
+    height: 118%;
+    justify-content: center;
+  }
+
+  .grid-block:nth-child(5) .paragraph {
+    width: 103%;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .tablet-image {
+    display: block;
+  }
+
+  .mobile-image {
+    display: none;
+  }
+
+  .footer {
+    padding: 6% 0;
+  }
+
+  .main-logo {
+    width: auto;
+  }
+
+  .footer-paragraph {
+    width: 36%;
+  }
+
+  .footer-paragraph br {
+    display: none;
+  }
+
+  .social-links {
+    width: 12%;
+  }
+}
+/* End of tablet design */
+
+/* ######## End of Responsice designs ######## */
