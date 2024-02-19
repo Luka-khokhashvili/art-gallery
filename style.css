@@ -33,14 +33,18 @@ body {
 
 .main-title {
   font-family: var(--main-font);
-  font-size: clamp(70px, 6.671vw, 100px);
+  font-size: clamp(70px, 6.671vw, 129px);
   font-weight: 900;
-  line-height: clamp(65px, 6.115vw, 75px);
+  line-height: clamp(65px, 6.115vw, 118px);
   text-transform: uppercase;
   color: var(--accent-black);
   position: relative;
-  margin: 18% 0 0 18%;
+  margin: 18% 0 0 18.4%;
   z-index: 1;
+}
+
+.responsive-title {
+  display: none;
 }
 
 .gradient-text {
@@ -82,7 +86,11 @@ body {
   font-weight: 300;
   line-height: clamp(28px, 2.224vw, 35px);
   color: var(--grey);
-  width: 94%;
+  width: 52%;
+}
+
+.welcome-right-half .paragraph {
+  margin-left: 9%;
 }
 
 .button {
@@ -109,7 +117,7 @@ body {
   margin: -10.1%;
   margin-right: -10.3%;
   padding: 10.1%;
-  padding-bottom: 10.17%;
+  padding-bottom: 10.22%;
   transition: background-color 0.4s ease 0s;
 }
 
@@ -133,8 +141,20 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 71%;
+  width: 100%;
   gap: 8%;
+}
+
+.mobile-grid-block {
+  display: none;
+}
+
+.grid-block:nth-child(1) .secondary-title {
+  width: 70%;
+}
+
+.grid-block:nth-child(1) .paragraph {
+  width: 60%;
 }
 
 .grid-block:nth-child(2) {
@@ -162,12 +182,14 @@ body {
   height: 100%;
   padding: 10%;
   margin-top: -30%;
+  justify-content: space-evenly;
   background-color: var(--accent-black);
 }
 
 .grid-block:nth-child(5) > .secondary-title,
 .grid-block:nth-child(5) > .paragraph {
   color: var(--white);
+  width: 94%;
 }
 
 .grid-block img {
@@ -188,9 +210,9 @@ body {
 
 .secondary-title {
   font-family: var(--main-font);
-  font-size: clamp(45px, 4.17vw, 60px);
+  font-size: clamp(45px, 4.17vw, 75px);
   font-weight: 900;
-  line-height: clamp(45px, 4.17vw, 60px);
+  line-height: clamp(45px, 4.17vw, 75px);
   text-transform: uppercase;
   color: var(--accent-black);
 }
@@ -198,7 +220,7 @@ body {
 .footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 100%;
   background-color: var(--accent-black);
   padding: 5% 0;
@@ -211,9 +233,9 @@ body {
 
 .footer-paragraph {
   font-family: var(--secondary-font);
-  font-size: clamp(15px, 1.251vw, 18px);
+  font-size: clamp(15px, 1.251vw, 23px);
   font-weight: 300;
-  line-height: clamp(26px, 1.946vw, 30px);
+  line-height: clamp(26px, 1.946vw, 38px);
   color: var(--white);
 }
 
@@ -238,7 +260,7 @@ body {
 
 .location-header {
   width: 100%;
-  height: 75%;
+  height: 75.1%;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(./assets/desktop/image-map@2x.png);
@@ -266,7 +288,7 @@ body {
 .location-body {
   background-color: var(--accent-black);
   width: 100%;
-  height: 70%;
+  height: 65%;
   display: flex;
 }
 
@@ -278,9 +300,9 @@ body {
 
 .location-body-title {
   font-family: var(--main-font);
-  font-size: 4.864vw;
+  font-size: clamp(48px, 4.864vw, 70px);
   font-weight: 900;
-  line-height: 4.864vw;
+  line-height: clamp(48px, 4.864vw, 70px);
   text-transform: uppercase;
   color: var(--white);
   width: 60%;
@@ -297,20 +319,20 @@ body {
 
 .location-secondary-title {
   font-family: var(--main-font);
-  font-size: 2.502vw;
+  font-size: clamp(32px, 2.502vw, 40px);
   font-weight: 900;
-  line-height: 2.502vw;
+  line-height: clamp(32px, 2.502vw, 40px);
   text-transform: uppercase;
   color: var(--accent-orange);
 }
 
 .location-paragraph {
   font-family: var(--secondary-font);
-  font-size: 1.529vw;
+  font-size: clamp(18px, 1.529vw, 24px);
   font-weight: 200;
-  line-height: 2.224vw;
+  line-height: clamp(28px, 2.224vw, 35px);
   color: var(--white);
-  width: 70%;
+  width: 61%;
 }
 
 .orange-footer {
@@ -358,11 +380,23 @@ body {
     margin-left: -8%;
     width: 50%;
   }
+  .paragraph {
+    width: 94%;
+  }
+
+  .welcome-right-half .paragraph {
+    margin-left: 0;
+  }
 
   .button {
     margin-left: unset;
     width: 50%;
     padding: 5%;
+  }
+
+  .button-arrow {
+    padding: 9.1%;
+    padding-bottom: 10.3%;
   }
 
   .grid-section {
@@ -376,14 +410,18 @@ body {
     gap: 20px;
   }
 
-  .grid-block:nth-child(1) h3 {
-    width: 75%;
+  .grid-block:nth-child(1) .paragraph {
+    width: 94%;
   }
 
   .grid-block:nth-child(5) {
     margin-top: -55%;
     height: 118%;
     justify-content: center;
+  }
+
+  .grid-block:nth-child(5) .secondary-title {
+    width: auto;
   }
 
   .grid-block:nth-child(5) .paragraph {
@@ -421,7 +459,36 @@ body {
   .social-links {
     width: 12%;
   }
+
+  /* #### location resposnive design #### */
+  .location-header {
+    height: 61.5%;
+    background-image: url(./assets/tablet/image-map@2x.png);
+  }
+
+  
+  .location-button {
+    margin-left: 10.8%;
+    width: 27.7%;
+    padding: 0;
+    padding-right: 0.6%;
+  }
+  
+  .location-body {
+    height: 45%;
+    gap: 8%;
+  }
+
+  .location-body-left-half {
+    padding: 6%;
+  }
+  .location-body-right-half .location-paragraph:last-child {
+    width: 91%;
+  }
+  /* #### End of location responsive design #### */
 }
 /* End of tablet design */
+
+
 
 /* ######## End of Responsice designs ######## */
