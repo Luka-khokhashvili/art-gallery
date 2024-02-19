@@ -136,7 +136,7 @@ body {
   gap: 2%;
 }
 
-.grid-block:nth-child(1) {
+.grid-block:nth-child(2) {
   grid-column: span 2;
   display: flex;
   flex-direction: column;
@@ -149,32 +149,32 @@ body {
   display: none;
 }
 
-.grid-block:nth-child(1) .secondary-title {
+.grid-block:nth-child(2) .secondary-title {
   width: 70%;
 }
 
-.grid-block:nth-child(1) .paragraph {
+.grid-block:nth-child(2) .paragraph {
   width: 60%;
 }
 
-.grid-block:nth-child(2) {
+.grid-block:nth-child(3) {
   grid-column: span 3;
 }
 
-.grid-block:nth-child(3) {
+.grid-block:nth-child(4) {
   grid-row: span 2;
   grid-column: span 3;
 }
 
-.grid-block:nth-child(3) img {
+.grid-block:nth-child(4) img {
   height: 94.2%;
 }
 
-.grid-block:nth-child(4) {
+.grid-block:nth-child(5) {
   grid-column: span 2;
 }
 
-.grid-block:nth-child(5) {
+.grid-block:nth-child(6) {
   grid-column: span 2;
   display: flex;
   flex-direction: column;
@@ -186,8 +186,8 @@ body {
   background-color: var(--accent-black);
 }
 
-.grid-block:nth-child(5) > .secondary-title,
-.grid-block:nth-child(5) > .paragraph {
+.grid-block:nth-child(6) > .secondary-title,
+.grid-block:nth-child(6) > .paragraph {
   color: var(--white);
   width: 94%;
 }
@@ -404,27 +404,27 @@ body {
     column-gap: 2%;
   }
 
-  .grid-block:nth-child(1) {
+  .grid-block:nth-child(2) {
     width: 100%;
     padding-top: 10%;
     gap: 20px;
   }
 
-  .grid-block:nth-child(1) .paragraph {
+  .grid-block:nth-child(2) .paragraph {
     width: 94%;
   }
 
-  .grid-block:nth-child(5) {
+  .grid-block:nth-child(6) {
     margin-top: -55%;
     height: 118%;
     justify-content: center;
   }
 
-  .grid-block:nth-child(5) .secondary-title {
+  .grid-block:nth-child(6) .secondary-title {
     width: auto;
   }
 
-  .grid-block:nth-child(5) .paragraph {
+  .grid-block:nth-child(6) .paragraph {
     width: 103%;
   }
 
@@ -489,6 +489,74 @@ body {
 }
 /* End of tablet design */
 
+/* Mobile design */
+@media screen and (max-width: 375px) {
+  .welcome-left-half {
+    display: none;
+  }
 
+  .welcome-right-half {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 0;
+    gap: 6%;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .tablet-image {
+    display: none;
+  }
+
+  .mobile-image {
+    display: flex;
+    position: static;
+  }
+
+  .responsive-title,
+  .welcome-right-half .paragraph,
+  .button {
+    margin-left: 6%;
+  }
+
+  .welcome-right-half .paragraph {
+    width: 86%;
+  }
+
+  .button {
+    width: 60%;
+    padding: 6%;
+  }
+
+  .button-arrow {
+    padding-bottom: 10.9%;
+  }
+
+  .grid-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-block:nth-child(2),
+  .grid-block:nth-child(4),
+  .grid-block:nth-child(5),
+  .grid-block:nth-child(6) {
+    grid-column: span 1;
+  }
+
+  .grid-block:nth-child(3) {
+    display: none;
+  }
+
+  .mobile-grid-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 8%;
+  }
+}
+/* End of mobile design */
 
 /* ######## End of Responsice designs ######## */
