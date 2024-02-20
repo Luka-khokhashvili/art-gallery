@@ -153,6 +153,10 @@ body {
   width: 70%;
 }
 
+.mobile-br {
+  display: none;
+}
+
 .grid-block:nth-child(2) .paragraph {
   width: 60%;
 }
@@ -251,7 +255,7 @@ body {
   fill: var(--accent-orange);
 }
 
-.margin-around {
+.social-link:nth-child(2) {
   margin: 0 10%;
 }
 /* End of Main page styles*/
@@ -490,7 +494,7 @@ body {
 /* End of tablet design */
 
 /* Mobile design */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .welcome-left-half {
     display: none;
   }
@@ -535,27 +539,106 @@ body {
   }
 
   .grid-section {
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
+    padding: 25% 6%;
+    gap: 15px;
   }
 
-  .grid-block:nth-child(2),
-  .grid-block:nth-child(4),
-  .grid-block:nth-child(5),
-  .grid-block:nth-child(6) {
-    grid-column: span 1;
+  .grid-block:nth-child(2) {
+    padding: 5% 0;
+  }
+
+  .grid-block:nth-child(2) .secondary-title {
+    width: 100%;
+  }
+
+  .mobile-br {
+    display: block;
   }
 
   .grid-block:nth-child(3) {
     display: none;
   }
 
+  .grid-block:nth-child(6) {
+    margin-top: 0;
+    gap: 20px;
+    padding: 13% 8%;
+  }
+
   .mobile-grid-block {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    gap: 8%;
   }
+
+  .footer {
+    width: auto;
+    flex-direction: column;
+    padding: 10% 5%;
+    gap: 35px;
+  }
+
+  .main-logo {
+    width: 35%;
+  }
+
+  .footer-paragraph {
+    width: 85%;
+  }
+
+  .social-links {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+  }
+
+  .social-link:nth-child(2) {
+    margin: 0;
+  }
+
+  /* #### location mobile design #### */
+  .location-header {
+    height: 55.2%;
+    background-image: url(./assets/mobile/image-map@2x.png);
+  }
+
+  .location-button {
+    width: 58%;
+    padding: 0 12% 0 0;
+    margin-left: 0;
+  }
+
+  .location-arrow {
+    display: flex;
+    justify-content: center;
+    padding: 10.1%;
+  }
+
+  .location-body {
+    flex-direction: column;
+    gap: 0;
+    padding: 8% 0;
+  }
+
+  .location-body-left-half {
+    width: auto;
+    height: auto;
+  }
+
+  .location-body-title {
+    width: auto;
+  }
+
+  .location-body-right-half {
+    padding-left: 6%;
+  }
+
+  .location-paragraph {
+    width: 100%;
+  }
+  /* #### End of location mobile design #### */
 }
 /* End of mobile design */
 
